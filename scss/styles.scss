@@ -1,0 +1,237 @@
+@import "variables";
+
+body{
+    background-color: rgba(0, 0, 0, 0.836);
+    background-image: url(../img/background-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: $font-family;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+// NAVBAR SECTION 
+.logo {
+    width: 55px;
+    height: 55px;
+}
+
+li a {
+    color: white !important;
+    font-size: 20px;
+}
+
+.dropdown-item  {
+    color: black !important;
+}
+
+.nav-link {
+    padding: 15px;
+}
+
+.nav-link:hover {
+    background-color: rgba(173, 168, 168, 0.233);
+}
+// HOME SECTION
+main {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    font-weight: 900;
+    font-size: $font-size;
+    color:white;
+}
+
+#span-titulo {
+    font-size: $font-size;;
+    color: $color-subtitulo;
+}
+
+.parrafo-home{
+    font-size: 20px;
+    color:white;
+    margin-top: 50px;
+}
+
+.btn-home{
+    background-color: $primary-color;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+}
+
+a {
+    color: white !important;
+    text-decoration: none;
+}
+
+// NOSOTROS SECTION
+.parrafo-nosotros {
+    background-color: rgba(83, 83, 83, 0.356);
+    p {
+        font-weight: 500;
+        font-size: 1.2em;
+        color:white;
+    }
+}
+// SUCURSALES SECTION
+.subtitulo {
+    color: $primary-color;
+}
+
+.fa-map-pin {
+    color: $primary-color;
+}
+
+.direccion {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+}
+.mapas {
+    height: 300px;
+}
+
+//CONTACTO SECTION
+.formulario-content{
+    display: grid;
+    justify-content: center;
+}
+
+.formulario {
+    color: white;
+    form div{
+        margin: 0;
+        padding: 1em;
+    }   
+}
+
+.form-control,
+form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none !important;
+    font-size: 16px;
+    border-bottom: 2px solid rgb(230, 131, 19);
+    color: white;
+}
+
+form textarea {
+    resize: none;
+}
+
+.btn-primary{
+    cursor: pointer;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-left: 10px;
+    width: 90%;
+}
+
+.btn-primary:hover, .btn-home:hover, .btn-primary:active,
+.btn-primary:focus, .btn-primary:visited {
+    background-color: $hover-color;
+}
+
+.logo-redes {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+
+.list-redes{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 10px;
+}
+
+
+.redes p {
+    text-align: center;
+    color:white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo-redes:hover {
+    transform: scale(1.2);
+}
+
+// FOOTER SECTION
+footer {
+    text-align: center;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    margin-top: auto; 
+}
+
+//MIXIN
+@mixin size-maps {
+        width: 600px;
+        height: 500px;
+}
+
+@mixin home-desktop {
+    .titulo, #span-titulo {
+        font-size: 50px;
+        margin-top: 100px;
+    }
+        p{
+            font-size: 30px;
+        }
+}
+
+@mixin size-cards {
+    width: 80%;
+    .card-img-top {
+        height: 350px;
+    }
+}
+
+//medias queries 
+@media only screen and (min-width: 1400px) {
+    .home {
+        @include home-desktop;
+    }
+    .mapas {
+        @include size-maps;
+    }
+    .card{
+        @include size-cards;
+    }
+    .container {
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    .mapas {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px){
+    .mapas {
+        width: 400px;
+        height: 400px;
+    }
+}
