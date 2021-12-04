@@ -64,7 +64,7 @@ main {
 .btn-home{
     background-color: $primary-color;
     width: 150px;
-    height: 50px;
+    height: 60px;
     border-radius: 5px;
     border: none;
     margin-top: 20px;
@@ -123,12 +123,30 @@ form textarea {
     outline: none;
     background: none !important;
     font-size: 16px;
-    border-bottom: 2px solid rgb(230, 131, 19);
+    border-bottom: 2px solid rgb(230, 131, 19) !important;
     color: white;
+}
+
+//No focus bootstrap
+.form-control{
+    &:focus{
+        box-shadow: none;
+        color: #FFFFFF;
+    }
+}
+
+.btn{
+    &:focus{
+        box-shadow: none;
+    }
 }
 
 form textarea {
     resize: none;
+}
+
+textarea::placeholder { 
+    color: white; 
 }
 
 .btn-primary{
@@ -145,6 +163,7 @@ form textarea {
 .btn-primary:hover, .btn-home:hover, .btn-primary:active,
 .btn-primary:focus, .btn-primary:visited {
     background-color: $hover-color;
+    
 }
 
 .logo-redes {
@@ -161,8 +180,7 @@ form textarea {
     padding: 10px;
 }
 
-
-.redes p {
+.redes-sociales {
     text-align: center;
     color:white;
     font-size: 25px;
