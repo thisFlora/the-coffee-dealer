@@ -193,6 +193,8 @@ footer {
   .nosotros .carousel-item {
     height: 500px;
     width: 700px; }
+  .nosotros .parrafo-nosotros {
+    height: 460px; }
   .parrafo-suscrip {
     font-size: 1.5rem;
     font-weight: 800;
