@@ -43,6 +43,10 @@ main {
     text-align: center;
 }
 
+.row-home {
+    margin-top: 20px;
+}
+
 .titulo {
     text-align: center;
     font-weight: 900;
@@ -58,7 +62,7 @@ main {
 .parrafo-home{
     font-size: 20px;
     color:white;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .btn-home{
@@ -75,6 +79,20 @@ a {
     text-decoration: none;
 }
 
+.carousel-item {
+    height: 300px;
+}
+
+// SUSCRIPCIONES SECTION
+.card{
+    margin: auto;
+}
+
+.parrafo-suscrip {
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+}
 // NOSOTROS SECTION
 .parrafo-nosotros {
     background-color: rgba(83, 83, 83, 0.356);
@@ -84,6 +102,7 @@ a {
         color:white;
     }
 }
+
 // SUCURSALES SECTION
 .subtitulo {
     color: $primary-color;
@@ -210,18 +229,19 @@ footer {
 @mixin home-desktop {
     .titulo, #span-titulo {
         font-size: 50px;
-        margin-top: 100px;
+        padding-top: 120px;
     }
-        p{
-            font-size: 30px;
+        .parrafo-home{
+            font-size: 25px;
+            padding-bottom: 10px;
+        }
+        .btn-home{
+            width: 200px;
         }
 }
 
 @mixin size-cards {
     width: 80%;
-    .card-img-top {
-        height: 350px;
-    }
 }
 
 //medias queries 
@@ -237,6 +257,21 @@ footer {
     }
     .container {
         margin-bottom: 100px;
+        padding-top: 40px;
+    }
+    .titulo{
+        padding-bottom: 20px;
+    }
+    .nosotros {
+        .carousel-item{
+            height: 500px;
+            width: 700px;
+        }
+    }
+    .parrafo-suscrip {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
     }
 }
 
@@ -245,6 +280,15 @@ footer {
         width: 500px;
         height: 500px;
     }
+    .card{
+        width: 400px;
+        height: 500px;
+    }
+    .parrafo-suscrip {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px){
@@ -252,4 +296,10 @@ footer {
         width: 400px;
         height: 400px;
     }
+    .parrafo-suscrip {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+    }
 }
+
