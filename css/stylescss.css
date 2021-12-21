@@ -194,7 +194,12 @@ footer {
     height: 500px;
     width: 700px; }
   .nosotros .parrafo-nosotros {
-    height: 460px; }
+    height: 470px; }
+    .nosotros .parrafo-nosotros p {
+      font-size: 1.5rem;
+      font-weight: 500; }
+    .nosotros .parrafo-nosotros .p-nosotros {
+      padding-top: 50px; }
   .parrafo-suscrip {
     font-size: 1.5rem;
     font-weight: 800;
